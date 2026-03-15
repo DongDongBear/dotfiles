@@ -1,7 +1,5 @@
 #!/bin/bash
 # 动动的 dotfiles 安装脚本
-# 用法: bash install.sh
-
 set -e
 DOTFILES="$(cd "$(dirname "$0")" && pwd)"
 
@@ -13,9 +11,13 @@ echo "🔗 链接 Neovim 配置..."
 mkdir -p ~/.config/nvim
 ln -sf "$DOTFILES/nvim/init.lua" ~/.config/nvim/init.lua
 
-echo "🔗 链接 Cursor 快捷键..."
-CURSOR_DIR="$HOME/Library/Application Support/Cursor/User"
-mkdir -p "$CURSOR_DIR"
-ln -sf "$DOTFILES/cursor/keybindings.json" "$CURSOR_DIR/keybindings.json"
+echo "🔗 链接 VSCode 系编辑器快捷键..."
+for APP in "Code" "Cursor" "Windsurf" "VSCodium"; do
+  DIR="$HOME/Library/Application Support/$APP/User"
+  if [ -d "$DIR" ]; then
+    ln -sf "$DOTFILES/vscode/keybindings.json" "$DIR/keybindings.json"
+    echo "   ✅ $APP"
+  fi
+done
 
-echo "✅ 全部搞定！重启 Ghostty 和 Cursor 生效。"
+echo "🎉 全部搞定！重启编辑器和 Ghostty 生效。"
