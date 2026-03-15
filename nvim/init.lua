@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  -- Flash.nvim — EasyMotion 替代，按 f 跳转
+  -- Flash.nvim — EasyMotion 替代
   {
     "folke/flash.nvim",
     vscode = true,
@@ -28,7 +28,7 @@ require("lazy").setup({
     },
   },
 
-  -- nvim-surround — 快速操作括号/引号 (ys/cs/ds)
+  -- nvim-surround — 快速操作括号/引号
   {
     "kylechui/nvim-surround",
     vscode = true,
@@ -36,58 +36,62 @@ require("lazy").setup({
     opts = {},
   },
 
-  -- vim-repeat — 让 surround 等插件支持 . 重复
+  -- vim-repeat — . 重复增强
   {
     "tpope/vim-repeat",
     vscode = true,
     event = "VeryLazy",
   },
 
-  -- nvim-treesitter-textobjects — 语法级文本对象 (vaf/vaa/vic)
-  {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    vscode = true,
-    event = "VeryLazy",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-  },
-
-  -- treesitter 本体（textobjects 依赖）
+  -- treesitter 本体
   {
     "nvim-treesitter/nvim-treesitter",
     vscode = true,
     build = ":TSUpdate",
     event = "VeryLazy",
-    opts = {
-      ensure_installed = { "javascript", "typescript", "tsx", "json", "html", "css", "lua" },
-      textobjects = {
+  },
+
+  -- treesitter-textobjects — 语法级文本对象
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    vscode = true,
+    event = "VeryLazy",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("nvim-treesitter-textobjects").setup({
         select = {
-          enable = true,
           lookahead = true,
-          keymaps = {
-            ["af"] = "@function.outer",   -- 选整个函数
-            ["if"] = "@function.inner",   -- 选函数体
-            ["ac"] = "@class.outer",      -- 选整个 class
-            ["ic"] = "@class.inner",      -- 选 class 体
-            ["aa"] = "@parameter.outer",  -- 选参数（含逗号）
-            ["ia"] = "@parameter.inner",  -- 选参数值
+          selection_modes = {
+            ["@function.outer"] = "V",
+            ["@class.outer"] = "V",
           },
         },
-        move = {
-          enable = true,
-          set_jumps = true,
-          goto_next_start = {
-            ["]f"] = "@function.outer",   -- 跳到下一个函数
-            ["]a"] = "@parameter.outer",  -- 跳到下一个参数
-          },
-          goto_previous_start = {
-            ["[f"] = "@function.outer",   -- 跳到上一个函数
-            ["[a"] = "@parameter.outer",  -- 跳到上一个参数
-          },
-        },
-      },
-    },
-    config = function(_, opts)
-      require("nvim-treesitter").setup(opts)
+      })
+
+      local select = function(query)
+        return function()
+          require("nvim-treesitter-textobjects.select").select_textobject(query, "textobjects")
+        end
+      end
+
+      local move = require("nvim-treesitter-textobjects.move")
+
+      -- 文本对象：函数
+      vim.keymap.set({ "x", "o" }, "af", select("@function.outer"))
+      vim.keymap.set({ "x", "o" }, "if", select("@function.inner"))
+      -- 文本对象：类
+      vim.keymap.set({ "x", "o" }, "ac", select("@class.outer"))
+      vim.keymap.set({ "x", "o" }, "ic", select("@class.inner"))
+      -- 文本对象：参数
+      vim.keymap.set({ "x", "o" }, "aa", select("@parameter.outer"))
+      vim.keymap.set({ "x", "o" }, "ia", select("@parameter.inner"))
+
+      -- 跳转：下一个/上一个函数
+      vim.keymap.set({ "n", "x", "o" }, "]f", function() move.goto_next_start("@function.outer", "textobjects") end)
+      vim.keymap.set({ "n", "x", "o" }, "[f", function() move.goto_previous_start("@function.outer", "textobjects") end)
+      -- 跳转：下一个/上一个参数
+      vim.keymap.set({ "n", "x", "o" }, "]a", function() move.goto_next_start("@parameter.outer", "textobjects") end)
+      vim.keymap.set({ "n", "x", "o" }, "[a", function() move.goto_previous_start("@parameter.outer", "textobjects") end)
     end,
   },
 })
@@ -97,7 +101,7 @@ if vim.g.vscode then
   local vscode = require("vscode")
   vim.opt.clipboard = "unnamedplus"
 
-  -- 注释（VSCode Neovim 内置支持）
+  -- 注释
   vim.keymap.set("n", "gc", "<Plug>VSCodeCommentary")
   vim.keymap.set("x", "gc", "<Plug>VSCodeCommentary")
   vim.keymap.set("n", "gcc", "<Plug>VSCodeCommentaryLine")
