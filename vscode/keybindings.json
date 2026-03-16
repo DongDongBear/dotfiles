@@ -15,10 +15,5 @@
 		"key": "alt+cmd+s",
 		"command": "workbench.action.toggleUnifiedSidebarFromKeyboard",
 		"when": "cursor.agentIdeUnification.enabled == true && !isAuxiliaryWindowFocusedContext"
-	},
-	{
-		"key": "j j",
-		"command": "vscode-neovim.compositeEscape1",
-		"when": "neovim.mode == insert && editorTextFocus"
 	}
 ]
