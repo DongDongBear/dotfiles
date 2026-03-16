@@ -144,11 +144,10 @@ if vim.g.vscode then
 
   -- Claude Code
   vim.keymap.set("n", "<leader>cc", function()
-    local cwd = vim.fn.getcwd()
-    vim.fn.jobstart(
-      string.format("/Applications/Ghostty.app/Contents/MacOS/ghostty -e claude --working-directory %s &", vim.fn.shellescape(cwd)),
-      { detach = true, shell = true }
-    )
+    vscode.action("workbench.action.terminal.newWithCwd", { args = { cwd = vim.fn.getcwd() } })
+    vim.defer_fn(function()
+      vscode.action("workbench.action.terminal.sendSequence", { args = { text = "claude\n" } })
+    end, 500)
   end)
 
   -- 折叠（修复 za 意外切换 tab）
