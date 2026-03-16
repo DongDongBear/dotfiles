@@ -1,0 +1,200 @@
+{
+	"editor.fontFamily": "Cascadia Code, FiraCode Nerd Font, Maple Mono NF, JetBrains Mono, Menlo, Consolas, monospace",
+	"editor.fontLigatures": true,
+	"editor.lineHeight": 30,
+	"editor.letterSpacing": 0.2,
+	"editor.lineNumbers": "relative",
+	"editor.tabSize": 2,
+	"editor.indentSize": 2,
+	"editor.smoothScrolling": true,
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.cursorSurroundingLines": 10,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.matchBrackets": "never",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.formatOnSaveMode": "file",
+	"editor.minimap.autohide": true,
+	"editor.minimap.scale": 2,
+	"editor.minimap.renderCharacters": false,
+	"window.titleBarStyle": "native",
+	"terminal.integrated.scrollback": 1e+25,
+	"terminal.integrated.fontSize": 13,
+	"terminal.integrated.fontFamily": "Cascadia Code, FiraCode Nerd Font Mono, Menlo, monospace",
+	"terminal.integrated.lineHeight": 1.7,
+	"files.autoSave": "onFocusChange",
+	"files.autoSaveWhenNoErrors": false,
+	"files.saveConflictResolution": "overwriteFileOnDisk",
+	"workbench.statusBar.visible": true,
+	"workbench.list.smoothScrolling": true,
+	"workbench.editor.focusRecentEditorAfterClose": true,
+	"workbench.startupEditor": "none",
+	"workbench.productIconTheme": "fluent-icons",
+	"workbench.editor.enablePreview": false,
+	"workbench.editor.enablePreviewFromQuickOpen": false,
+	"workbench.editor.enablePreviewFromCodeNavigation": false,
+	"workbench.editor.openPositioning": "right",
+	"editor.mouseWheelScrollSensitivity": 1.15,
+	"editor.fastScrollSensitivity": 2,
+	"window.zoomLevel": 0.2,
+	"editor.minimap.enabled": false,
+	"editor.codeLens": false,
+	"breadcrumbs.enabled": false,
+	"editor.renderWhitespace": "selection",
+	"editor.semanticHighlighting.enabled": false,
+	"editor.inlayHints.enabled": "offUnlessPressed",
+	"files.watcherExclude": {
+		"**/node_modulesdist.nextbuild/**": true
+	},
+	"explorer.confirmDelete": false,
+	"search.followSymlinks": false,
+	"security.workspace.trust.untrustedFiles": "open",
+	"notebook.formatOnSave.enabled": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.maxComputationTime": 0,
+	"editor.cursorBlinking": "blink",
+	"workbench.colorCustomizations": {
+		"editorCursor.foreground": "#00ff11",
+		"minimap.background": "#00000000",
+		"tab.inactiveBackground": "#0c0e14",
+		"[Vira*]": {
+			"toolbar.activeBackground": "#80CBC426",
+			"button.background": "#80CBC4",
+			"button.hoverBackground": "#80CBC4cc",
+			"extensionButton.separator": "#80CBC433",
+			"extensionButton.background": "#80CBC414",
+			"extensionButton.foreground": "#80CBC4",
+			"extensionButton.hoverBackground": "#80CBC433",
+			"extensionButton.prominentForeground": "#80CBC4",
+			"extensionButton.prominentBackground": "#80CBC414",
+			"extensionButton.prominentHoverBackground": "#80CBC433",
+			"activityBarBadge.background": "#80CBC4",
+			"activityBar.activeBorder": "#80CBC4",
+			"activityBarTop.activeBorder": "#80CBC4",
+			"list.inactiveSelectionIconForeground": "#80CBC4",
+			"list.activeSelectionForeground": "#80CBC4",
+			"list.inactiveSelectionForeground": "#80CBC4",
+			"list.highlightForeground": "#80CBC4",
+			"sash.hoverBorder": "#80CBC480",
+			"list.activeSelectionIconForeground": "#80CBC4",
+			"scrollbarSlider.activeBackground": "#80CBC480",
+			"editorSuggestWidget.highlightForeground": "#80CBC4",
+			"textLink.foreground": "#80CBC4",
+			"progressBar.background": "#80CBC4",
+			"pickerGroup.foreground": "#80CBC4",
+			"tab.activeBorder": "#80CBC4",
+			"notificationLink.foreground": "#80CBC4",
+			"editorWidget.resizeBorder": "#80CBC4",
+			"editorWidget.border": "#80CBC4",
+			"settings.modifiedItemIndicator": "#80CBC4",
+			"panelTitle.activeBorder": "#80CBC4",
+			"breadcrumb.activeSelectionForeground": "#80CBC4",
+			"menu.selectionForeground": "#80CBC4",
+			"menubar.selectionForeground": "#80CBC4",
+			"editor.findMatchBorder": "#80CBC4",
+			"selection.background": "#80CBC440",
+			"statusBarItem.remoteBackground": "#80CBC414",
+			"statusBarItem.remoteHoverBackground": "#80CBC4",
+			"statusBarItem.remoteForeground": "#80CBC4",
+			"notebook.inactiveFocusedCellBorder": "#80CBC480",
+			"commandCenter.activeBorder": "#80CBC480",
+			"chat.slashCommandForeground": "#80CBC4",
+			"chat.avatarForeground": "#80CBC4",
+			"activityBarBadge.foreground": "#000000",
+			"button.foreground": "#000000",
+			"statusBarItem.remoteHoverForeground": "#000000"
+		},
+		"statusBar.background": "#8A63D2",
+		"statusBar.noFolderBackground": "#8A63D2",
+		"statusBar.debuggingBackground": "#8A63D2",
+		"statusBar.foreground": "#ffffff",
+		"statusBar.debuggingForeground": "#ffffff"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[less]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[python]": {
+		"editor.defaultFormatter": "mikoz.black-py"
+	},
+	"[oraclesql]": {
+		"editor.suggest.showSnippets": true,
+		"editor.quickSuggestions": {
+			"comments": "on",
+			"strings": "on",
+			"other": "on"
+		}
+	},
+	"git.confirmSync": false,
+	"git.enableSmartCommit": true,
+	"git.autofetch": true,
+	"git.ignoreRebaseWarning": true,
+	"git.openRepositoryInParentFolders": "never",
+	"git.replaceTagsWhenPull": true,
+	"javascript.updateImportsOnFileMove.enabled": "never",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"symbols.hidesExplorerArrows": false,
+	"cursor.general.gitGraphIndexing": "enabled",
+	"cursor.diffs.useCharacterLevelDiffs": true,
+	"augment.nextEdit.enableGlobalBackgroundSuggestions": true,
+	"augment.nextEdit.highlightSuggestionsInTheEditor": true,
+	"catppuccin-noctis-icons.hidesExplorerArrows": false,
+	"customAppIcons.path": "~/Library/Application Support/Cursor/User/icons",
+	"geminicodeassist.project": "utilitarian-mark-rvrh3",
+	"geminicodeassist.displayInlineContextHint": false,
+	"nebulaOni.update.restoreConfiguration": {
+		"themeSettings": {
+			"background": "Grey",
+			"main": "Bumblebee",
+			"highlight": "Ultra Violet",
+			"focusBorder": "ON",
+			"fontStyle": "Italic",
+			"syntaxBrightness": "Normal",
+			"comments": "Dark Violet",
+			"favorite": "OFF"
+		},
+		"favoriteSettings": {
+			"background": "Glacial Blue",
+			"main": "Sakura",
+			"highlight": "Ultra Violet",
+			"focusBorder": "ON",
+			"fontStyle": "Italic",
+			"syntaxBrightness": "Dimmed",
+			"comments": "Dark Magenta",
+			"favorite": "Nebula Oni (Pegasus)"
+		}
+	},
+	"workbench.colorTheme": "Solarized Dark",
+	"window.commandCenter": true,
+	"workbench.experimental.share.enabled": true,
+	"workbench.editor.editorActionsLocation": "titleBar",
+	"chatgpt.localeOverride": null,
+	"extensions.experimental.affinity": {
+		"asvetliakov.vscode-neovim": 1
+	},
+	"vscode-neovim.compositeKeys": {
+		"jj": {
+			"command": "vscode-neovim.escape"
+		}
+	}
+}

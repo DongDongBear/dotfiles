@@ -141,6 +141,15 @@ if vim.g.vscode then
   vim.keymap.set("n", "CLO", function() vscode.action("workbench.action.closeOtherEditors") end)
   vim.keymap.set("n", "<leader>pcp", function() vscode.action("copyRelativeFilePath") end)
 
+  -- Claude Code
+  vim.keymap.set("n", "<leader>cc", function()
+    local cwd = vim.fn.getcwd()
+    vim.fn.jobstart(
+      string.format("/Applications/Ghostty.app/Contents/MacOS/ghostty -e claude --working-directory %s &", vim.fn.shellescape(cwd)),
+      { detach = true, shell = true }
+    )
+  end)
+
   -- 折叠（修复 za 意外切换 tab）
   vim.keymap.set("n", "za", function() vscode.action("editor.toggleFold") end)
   vim.keymap.set("n", "zc", function() vscode.action("editor.fold") end)
