@@ -20,6 +20,7 @@ require("lazy").setup({
     opts = {
       labels = "asdfghjklqwertyuiopzxcvbnm",
       modes = { char = { enabled = false }, search = { enabled = false } },
+      search = { mode = "fuzzy" },
       label = { uppercase = false, rainbow = { enabled = true, shade = 5 } },
     },
     keys = {
