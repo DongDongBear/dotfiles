@@ -143,7 +143,7 @@ if vim.g.vscode then
   vim.keymap.set("n", "<leader>pcp", function() vscode.action("copyRelativeFilePath") end)
 
   -- Claude Code
-  vim.keymap.set("n", "<leader>cc", function() vscode.action("claude-vscode.editor.openLast") end)
+  vim.keymap.set("n", "<leader>cc", function() vscode.action("claude-vscode.terminal.open") end)
 
   -- 折叠（修复 za 意外切换 tab）
   vim.keymap.set("n", "za", function() vscode.action("editor.toggleFold") end)
