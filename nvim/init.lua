@@ -144,12 +144,7 @@ if vim.g.vscode then
 
   -- Claude Code
   vim.keymap.set("n", "<leader>cc", function()
-    vscode.action("workbench.action.terminal.new")
-    vim.defer_fn(function()
-      vscode.action("workbench.action.terminal.sendSequence", {
-        args = { text = "claude --allow-dangerously-skip-permission\r" },
-      })
-    end, 120)
+    vscode.action("claude-vscode.editor.openLast")
   end)
 
   -- 折叠（修复 za 意外切换 tab）
