@@ -11,7 +11,7 @@ font-thicken = true
 adjust-cell-height = 2
 
 # === 主题 ===
-theme = catppuccin-mocha
+theme = Solarized Dark Higher Contrast
 
 # === 窗口 ===
 background-opacity = 0.88
