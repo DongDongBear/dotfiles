@@ -1,7 +1,8 @@
 {
 	"editor.fontFamily": "Cascadia Code, FiraCode Nerd Font, Maple Mono NF, JetBrains Mono, Menlo, Consolas, monospace",
 	"editor.fontLigatures": true,
-	"editor.lineHeight": 30,
+	"editor.fontSize": 12.5,
+	"editor.lineHeight": 32,
 	"editor.letterSpacing": 0.2,
 	"editor.lineNumbers": "relative",
 	"editor.tabSize": 2,
@@ -14,10 +15,20 @@
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
 	"editor.formatOnSaveMode": "file",
-	"editor.minimap.autohide": true,
+	"editor.minimap.autohide": "mouseover",
 	"editor.minimap.scale": 2,
 	"editor.minimap.renderCharacters": false,
+	"editor.minimap.enabled": false,
+	"editor.codeLens": false,
+	"editor.renderWhitespace": "selection",
+	"editor.semanticHighlighting.enabled": false,
+	"editor.inlayHints.enabled": "offUnlessPressed",
+	"editor.mouseWheelScrollSensitivity": 1.15,
+	"editor.fastScrollSensitivity": 2,
+	"editor.cursorBlinking": "blink",
 	"window.titleBarStyle": "native",
+	"window.zoomLevel": 0.2,
+	"window.commandCenter": true,
 	"terminal.integrated.scrollback": 1e+25,
 	"terminal.integrated.fontSize": 13,
 	"terminal.integrated.fontFamily": "Cascadia Code, FiraCode Nerd Font Mono, Menlo, monospace",
@@ -25,6 +36,9 @@
 	"files.autoSave": "onFocusChange",
 	"files.autoSaveWhenNoErrors": false,
 	"files.saveConflictResolution": "overwriteFileOnDisk",
+	"files.watcherExclude": {
+		"**/node_modulesdist.nextbuild/**": true
+	},
 	"workbench.statusBar.visible": true,
 	"workbench.list.smoothScrolling": true,
 	"workbench.editor.focusRecentEditorAfterClose": true,
@@ -34,25 +48,12 @@
 	"workbench.editor.enablePreviewFromQuickOpen": false,
 	"workbench.editor.enablePreviewFromCodeNavigation": false,
 	"workbench.editor.openPositioning": "right",
-	"editor.mouseWheelScrollSensitivity": 1.15,
-	"editor.fastScrollSensitivity": 2,
-	"window.zoomLevel": 0.2,
-	"editor.minimap.enabled": false,
-	"editor.codeLens": false,
-	"breadcrumbs.enabled": false,
-	"editor.renderWhitespace": "selection",
-	"editor.semanticHighlighting.enabled": false,
-	"editor.inlayHints.enabled": "offUnlessPressed",
-	"files.watcherExclude": {
-		"**/node_modulesdist.nextbuild/**": true
-	},
-	"explorer.confirmDelete": false,
-	"search.followSymlinks": false,
-	"security.workspace.trust.untrustedFiles": "open",
-	"notebook.formatOnSave.enabled": true,
-	"diffEditor.ignoreTrimWhitespace": false,
-	"diffEditor.maxComputationTime": 0,
-	"editor.cursorBlinking": "blink",
+	"workbench.editor.editorActionsLocation": "titleBar",
+	"workbench.editor.centeredLayoutAutoResize": false,
+	"workbench.secondarySideBar.defaultVisibility": "hidden",
+	"workbench.experimental.share.enabled": true,
+	"workbench.colorTheme": "Solarized Sharp Dark",
+	"workbench.iconTheme": "vs-seti",
 	"workbench.colorCustomizations": {
 		"editorCursor.foreground": "#00ff11",
 		"minimap.background": "#00000000",
@@ -110,6 +111,14 @@
 		"statusBar.foreground": "#ffffff",
 		"statusBar.debuggingForeground": "#ffffff"
 	},
+	"breadcrumbs.enabled": false,
+	"explorer.confirmDelete": false,
+	"search.followSymlinks": false,
+	"security.workspace.trust.untrustedFiles": "open",
+	"notebook.formatOnSave.enabled": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.maxComputationTime": 0,
+	"json.schemaDownload.enable": true,
 	"[javascript]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
@@ -154,10 +163,6 @@
 	"javascript.updateImportsOnFileMove.enabled": "never",
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"symbols.hidesExplorerArrows": false,
-	"cursor.general.gitGraphIndexing": "enabled",
-	"cursor.diffs.useCharacterLevelDiffs": true,
-	"augment.nextEdit.enableGlobalBackgroundSuggestions": true,
-	"augment.nextEdit.highlightSuggestionsInTheEditor": true,
 	"catppuccin-noctis-icons.hidesExplorerArrows": false,
 	"customAppIcons.path": "~/Library/Application Support/Cursor/User/icons",
 	"geminicodeassist.project": "utilitarian-mark-rvrh3",
@@ -184,11 +189,11 @@
 			"favorite": "Nebula Oni (Pegasus)"
 		}
 	},
-	"workbench.colorTheme": "Solarized Dark",
-	"window.commandCenter": true,
-	"workbench.experimental.share.enabled": true,
-	"workbench.editor.editorActionsLocation": "titleBar",
-	"chatgpt.localeOverride": null,
+	"cursor.general.gitGraphIndexing": "enabled",
+	"cursor.diffs.useCharacterLevelDiffs": true,
+	"augment.nextEdit.enableGlobalBackgroundSuggestions": true,
+	"augment.nextEdit.highlightSuggestionsInTheEditor": true,
+	"antigravity.marketplaceGalleryItemURL": "",
 	"extensions.experimental.affinity": {
 		"asvetliakov.vscode-neovim": 1
 	},
@@ -196,5 +201,389 @@
 		"jj": {
 			"command": "vscode-neovim.escape"
 		}
-	}
+	},
+	"vim.mouseSelectionGoesIntoVisualMode": false,
+	"vim.useSystemClipboard": true,
+	"vim.useCtrlKeys": false,
+	"vim.handleKeys": {
+		"<Esc>": false
+	},
+	"vim.easymotion": true,
+	"vim.timeout": 300,
+	"vim.easymotionMarkerForegroundColorOneChar": "#ffeb3b",
+	"vim.easymotionMarkerForegroundColorTwoCharFirst": "#ff9800",
+	"vim.easymotionMarkerForegroundColorTwoCharSecond": "#ff6f00",
+	"vim.autoSwitchInputMethod.enable": true,
+	"vim.autoSwitchInputMethod.enableWindow": true,
+	"vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+	"vim.autoSwitchInputMethod.insertLeaveIM": "com.apple.keylayout.ABC",
+	"vim.autoSwitchInputMethod.insertModeIM": "com.apple.keylayout.ABC",
+	"vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
+	"vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
+	"vim.insertModeKeyBindings": [
+		{
+			"before": [
+				"j",
+				"j"
+			],
+			"after": [
+				"<Esc>"
+			]
+		}
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<space>",
+				"l"
+			],
+			"after": [
+				"$"
+			]
+		},
+		{
+			"before": [
+				"<space>",
+				"h"
+			],
+			"after": [
+				"^"
+			]
+		},
+		{
+			"before": [
+				"<space>",
+				"w",
+				"w"
+			],
+			"commands": [
+				"workbench.action.navigateEditorGroups"
+			]
+		},
+		{
+			"before": [
+				" ",
+				"q"
+			],
+			"after": [
+				":",
+				"w",
+				"q",
+				"<CR>"
+			]
+		},
+		{
+			"before": [
+				" ",
+				"t"
+			],
+			"commands": [
+				"cursorTop"
+			]
+		},
+		{
+			"before": [
+				" ",
+				";"
+			],
+			"commands": [
+				"editor.action.revealDefinition"
+			]
+		},
+		{
+			"before": [
+				" ",
+				"'"
+			],
+			"commands": [
+				"workbench.action.navigateBack"
+			]
+		},
+		{
+			"before": [
+				" ",
+				"i"
+			],
+			"commands": [
+				"workbench.action.nextEditor"
+			]
+		},
+		{
+			"before": [
+				" ",
+				"u"
+			],
+			"commands": [
+				"workbench.action.previousEditor"
+			]
+		},
+		{
+			"before": [
+				"<C-l>"
+			],
+			"commands": [
+				":bn"
+			]
+		},
+		{
+			"before": [
+				"<C-h>"
+			],
+			"commands": [
+				":bp"
+			]
+		},
+		{
+			"before": [
+				"<C-d>"
+			],
+			"commands": [
+				":q"
+			]
+		},
+		{
+			"before": [
+				"<C-e>"
+			],
+			"commands": [
+				"workbench.explorer.fileView.focus"
+			]
+		},
+		{
+			"before": [
+				"y",
+				"a"
+			],
+			"after": [
+				"y",
+				"a",
+				"w"
+			]
+		},
+		{
+			"before": [
+				"d",
+				"j"
+			],
+			"after": [
+				"d",
+				"a",
+				"w"
+			]
+		},
+		{
+			"before": [
+				"J"
+			],
+			"after": [
+				"5",
+				"j"
+			]
+		},
+		{
+			"before": [
+				"K"
+			],
+			"after": [
+				"5",
+				"k"
+			]
+		},
+		{
+			"before": [
+				"L"
+			],
+			"after": [
+				"5",
+				"l"
+			]
+		},
+		{
+			"before": [
+				"H"
+			],
+			"after": [
+				"5",
+				"h"
+			]
+		},
+		{
+			"before": [
+				"<leader>"
+			],
+			"after": [
+				"<leader>",
+				"<leader>"
+			]
+		},
+		{
+			"before": [
+				"f"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"s"
+			]
+		},
+		{
+			"before": [
+				"W"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"<leader>",
+				"j"
+			]
+		},
+		{
+			"before": [
+				"C",
+				"L",
+				"A"
+			],
+			"commands": [
+				"workbench.action.closeAllEditors"
+			]
+		},
+		{
+			"before": [
+				"C",
+				"L",
+				"O"
+			],
+			"commands": [
+				"workbench.action.closeOtherEditors"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"p",
+				"c",
+				"p"
+			],
+			"commands": [
+				"copyRelativeFilePath"
+			]
+		}
+	],
+	"vim.visualModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<space>",
+				"l"
+			],
+			"after": [
+				"$",
+				"h"
+			]
+		},
+		{
+			"before": [
+				"<space>",
+				"h"
+			],
+			"after": [
+				"^"
+			]
+		},
+		{
+			"before": [
+				"J"
+			],
+			"after": [
+				"5",
+				"j"
+			]
+		},
+		{
+			"before": [
+				"K"
+			],
+			"after": [
+				"5",
+				"k"
+			]
+		},
+		{
+			"before": [
+				"L"
+			],
+			"after": [
+				"5",
+				"l"
+			]
+		},
+		{
+			"before": [
+				"H"
+			],
+			"after": [
+				"5",
+				"h"
+			]
+		},
+		{
+			"before": [
+				"p"
+			],
+			"after": [
+				"p",
+				"g",
+				"v",
+				"y"
+			]
+		},
+		{
+			"before": [
+				"<leader>"
+			],
+			"after": [
+				"<leader>",
+				"<leader>"
+			]
+		},
+		{
+			"before": [
+				"w"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"s"
+			]
+		},
+		{
+			"before": [
+				"W"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"<leader>",
+				"j"
+			]
+		}
+	],
+	"gitlens.views.scm.grouped.views": {
+		"commits": true,
+		"branches": true,
+		"remotes": true,
+		"stashes": true,
+		"tags": true,
+		"worktrees": true,
+		"contributors": true,
+		"fileHistory": true,
+		"repositories": true,
+		"searchAndCompare": true,
+		"launchpad": false
+	},
+	"claudeCode.initialPermissionMode": "acceptEdits",
+	"claudeCode.allowDangerouslySkipPermissions": true,
+	"claudeCode.respectGitIgnore": false,
+	"claudeCode.preferredLocation": "panel",
+	"claudeCode.useTerminal": true,
+	"claudeCode.selectedModel": "default"
 }
