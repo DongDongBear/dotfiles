@@ -20,7 +20,8 @@ require("lazy").setup({
     opts = {
       labels = "asdfghjklqwertyuiopzxcvbnm",
       modes = { char = { enabled = false }, search = { enabled = false } },
-      search = { mode = "fuzzy" },
+      search = { mode = "fuzzy", incremental = true },
+      jump = { nohlsearch = true },
       label = { uppercase = false, rainbow = { enabled = true, shade = 5 } },
     },
     keys = {
@@ -101,6 +102,8 @@ require("lazy").setup({
 if vim.g.vscode then
   local vscode = require("vscode")
   vim.opt.clipboard = "unnamedplus"
+  vim.opt.ignorecase = true
+  vim.opt.smartcase = true
 
   -- 注释
   vim.keymap.set("n", "gc", "<Plug>VSCodeCommentary")
