@@ -27,7 +27,7 @@
 	"editor.fastScrollSensitivity": 2,
 	"editor.cursorBlinking": "blink",
 	"window.titleBarStyle": "native",
-	"window.zoomLevel": 0.2,
+	"window.zoomLevel": 0,
 	"window.commandCenter": true,
 	"terminal.integrated.scrollback": 1e+25,
 	"terminal.integrated.fontSize": 13,
