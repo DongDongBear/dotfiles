@@ -164,7 +164,7 @@
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"symbols.hidesExplorerArrows": false,
 	"catppuccin-noctis-icons.hidesExplorerArrows": false,
-	"customAppIcons.path": "~/Library/Application Support/Cursor/User/icons",
+	"customAppIcons.path": "~/Library/Application Support/Code/User/icons",
 	"geminicodeassist.project": "utilitarian-mark-rvrh3",
 	"geminicodeassist.displayInlineContextHint": false,
 	"nebulaOni.update.restoreConfiguration": {
@@ -189,11 +189,7 @@
 			"favorite": "Nebula Oni (Pegasus)"
 		}
 	},
-	"cursor.general.gitGraphIndexing": "enabled",
-	"cursor.diffs.useCharacterLevelDiffs": true,
-	"augment.nextEdit.enableGlobalBackgroundSuggestions": true,
-	"augment.nextEdit.highlightSuggestionsInTheEditor": true,
-	"antigravity.marketplaceGalleryItemURL": "",
+
 	"extensions.experimental.affinity": {
 		"asvetliakov.vscode-neovim": 1
 	},
@@ -583,7 +579,15 @@
 	"claudeCode.initialPermissionMode": "acceptEdits",
 	"claudeCode.allowDangerouslySkipPermissions": true,
 	"claudeCode.respectGitIgnore": false,
-	"claudeCode.preferredLocation": "panel",
-	"claudeCode.useTerminal": true,
-	"claudeCode.selectedModel": "default"
+	"claudeCode.preferredLocation": "sidebar",
+	"claudeCode.useTerminal": false,
+	"claudeCode.selectedModel": "default",
+	"claudeCode.environmentVariables": [
+		{
+			"name": "CLAUDE_CODE_EFFORT_LEVEL",
+			"value": "max"
+		}
+	],
+	"explorer.confirmPasteNative": false,
+	"terminal.integrated.inheritEnv": false
 }

@@ -1,0 +1,130 @@
+# 动动的 VSCode 扩展列表
+# 从 Cursor 迁移，已过滤 Cursor/Windsurf 专属扩展
+# 用法: cat extensions.txt | grep -v '^#' | grep -v '^$' | xargs -L 1 code --install-extension
+
+# === 主题 ===
+artlaman.chalice-color-theme
+dominvm.dominvm-theme
+ginfuru.ginfuru-better-solarized-dark-theme
+iiinsomnia.solarized-pro
+jansim.solarized-sunset
+muhammad-sammy.solarized-sharp-vscode
+monokai.theme-monokai-pro-vscode
+psudo-dev.nebula-oni-theme
+santoso-wijaya.helios-selene
+teabyii.ayu
+wesbos.theme-cobalt2
+
+# === 图标主题 ===
+alexdauenhauer.catppuccin-noctis-icons
+antfu.icons-carbon
+azat-io.eyecons
+beardedbear.beardedicons
+castrogusttavo.symbols
+catppuccin.catppuccin-vsc-icons
+edwinkofler.vscode-hyperupcall-pack-product-icons
+emmanuelbeziat.vscode-great-icons
+emroussel.atom-icons
+laurenttreguier.vscode-simple-icons
+leonn534.dark-minimalist-icons
+littensy.charmed-icons
+miguelsolorio.fluent-icons
+o-dka.vsclassic-icon-theme
+pkief.material-icon-theme
+pkief.material-product-icons
+scalet.let-icons
+wilfriedago.vscode-symbols-icon-theme
+
+# === 编辑器增强 ===
+asvetliakov.vscode-neovim
+datasert.vscode-texty
+robole.snippets-ranger
+shardulm94.trailing-spaces
+danielbayley.custom-app-icons
+mechatroner.rainbow-csv
+grapecity.gc-excelviewer
+
+# === Git ===
+eamodio.gitlens
+mhutchie.git-graph
+felipecaputo.git-project-manager
+lang2hong.githd
+phil294.git-log--graph
+pinage404.git-extension-pack
+
+# === 前端/Web 开发 ===
+astro-build.astro-vscode
+vue.volar
+wix.vscode-import-cost
+
+# === Tailwind CSS ===
+alfredbirk.tailwind-documentation
+andrewmcodes.tailwindcss-extension-pack
+austenc.tailwind-docs
+blair-c.tailwind-to-css-snippets
+bourhaouta.tailwindshades
+ellreka.tailwindcss-highlight
+esdete.tailwind-rainbow
+fokklz.tailwind-preview
+heybourn.headwind
+imgildev.vscode-tailwindcss-snippets
+kalimahapps.tailwind-config-viewer
+macieklad.tailwind-sass-syntax
+noor.live-tailwind-previewer
+numso.vscode-tailwindcss-with-hex-colors
+omrigrossman.tailwind-color-matcher
+pinegrow.piny
+simonhe.to-tailwindcss
+sudoaugustin.tailwindcss-transpiler
+thebearingedge.twind-intellisense-fork
+xiaoxian521.tailwindcss-highlight-intellisense
+zarifprogrammer.tailwind-snippets
+
+# === Python ===
+ms-python.debugpy
+ms-python.python
+njpwerner.autodocstring
+
+# === Jupyter ===
+ms-toolsai.jupyter
+ms-toolsai.jupyter-renderers
+ms-toolsai.vscode-jupyter-cell-tags
+ms-toolsai.vscode-jupyter-slideshow
+
+# === C/C++ ===
+llvm-vs-code-extensions.vscode-clangd
+ms-vscode.cmake-tools
+vadimcn.vscode-lldb
+
+# === Flutter/Dart ===
+dart-code.dart-code
+dart-code.flutter
+circlecodesolution.ccs-flutter-color
+felixangelov.bloc
+jeroen-meijer.pubspec-assist
+nash.awesome-flutter-snippets
+robert-brunhage.flutter-riverpod-snippets
+zlorn.vstuc
+
+# === Docker ===
+ms-azuretools.vscode-containers
+ms-azuretools.vscode-docker
+
+# === Markdown ===
+bierner.markdown-preview-github-styles
+davidanson.vscode-markdownlint
+yzane.markdown-pdf
+zaaack.markdown-editor
+
+# === AI 辅助 ===
+anthropic.claude-code
+google.geminicodeassist
+google.gemini-cli-vscode-ide-companion
+openai.chatgpt
+
+# === 其他 ===
+streetsidesoftware.code-spell-checker
+pflannery.vscode-versionlens
+ms-dotnettools.vscode-dotnet-runtime
+xscriptor.xscriptor-themes
+tobiah.unity-tools

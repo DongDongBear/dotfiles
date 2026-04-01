@@ -142,9 +142,19 @@ if vim.g.vscode then
   vim.keymap.set("n", "CLO", function() vscode.action("workbench.action.closeOtherEditors") end)
   vim.keymap.set("n", "<leader>pcp", function() vscode.action("copyRelativeFilePath") end)
 
-  -- Claude Code
+  -- Claude Code（直接终端命令）
   vim.keymap.set("n", "<leader>cc", function()
-    vscode.action("claude-vscode.editor.openLast")
+    vscode.action("runCommands", {
+      args = {{
+        commands = {
+          "workbench.action.terminal.new",
+          {
+            command = "workbench.action.terminal.sendSequence",
+            args = { text = "claude --dangerously-skip-permissions --effort max\n" }
+          }
+        }
+      }}
+    })
   end)
 
   -- 折叠（修复 za 意外切换 tab）

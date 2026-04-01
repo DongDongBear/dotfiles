@@ -1,9 +1,5 @@
 [
 	{
-		"key": "cmd+i",
-		"command": "composerMode.agent"
-	},
-	{
 		"key": "shift+enter",
 		"command": "workbench.action.terminal.sendSequence",
 		"args": {
@@ -12,8 +8,8 @@
 		"when": "terminalFocus"
 	},
 	{
-		"key": "alt+cmd+s",
-		"command": "workbench.action.toggleUnifiedSidebarFromKeyboard",
-		"when": "cursor.agentIdeUnification.enabled == true && !isAuxiliaryWindowFocusedContext"
+		"key": "space q",
+		"command": "workbench.action.closeActiveEditor",
+		"when": "editorTextFocus && vim.mode == 'Normal'"
 	}
 ]
